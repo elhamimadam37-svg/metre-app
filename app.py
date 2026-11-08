@@ -5,6 +5,8 @@ import os
 
 st.set_page_config(page_title="تطبيق المترية وحديد التسليح الاحترافي", layout="wide")
 
+# عرض اسمك في أعلى التطبيق بأسلوب مهني وأنيق
+st.markdown("### 👷 Conçu et développé par : **[اسمك هنا]**")
 st.title("🏗️ تطبيق المترية وحديد التسليح الشامل (الإصدار المهني المتكامل)")
 
 FILE_METRE = "table_metre_pro.csv"
@@ -130,7 +132,6 @@ with tab2:
         poids_unit = {6: 0.222, 8: 0.394, 10: 0.617, 12: 0.888, 14: 1.208, 16: 1.578, 20: 2.468}
         st.write(f"القطر المختار: **Ø{a_dia}**")
         st.write(f"الوزن الطولي: **{poids_unit[a_dia]} kg/m**")
-        # إدخال حجم الخرسانة المقابل لاحتساب نسبة الاستهلاك kg/m3
         concrete_vol = st.number_input("حجم الخرسانة المقابل (m³) لاحتساب النسبة", min_value=0.0, value=1.0, key="c_vol")
 
     # حسابات الأوزان والأطوال
